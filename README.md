@@ -1,7 +1,6 @@
 She Can Foundation - Intern Dashboard
 A professional web application designed for She Can Foundation interns to monitor fundraising progress, view leaderboards, and unlock achievement-based rewards.
-
-**Features**
+🌟 Features
 
 Intern Dashboard: Displays personal statistics, unique referral codes, and total donations raised.
 Leaderboard: Showcases top-performing interns with rankings and achievement badges.
@@ -9,30 +8,29 @@ Rewards System: Unlocks badges based on fundraising milestones.
 Responsive Design: Optimized for seamless use across desktop, tablet, and mobile devices using Tailwind CSS.
 RESTful API: Powered by a Node.js and Express backend for efficient data management.
 
-**Project Structure**
-She Can Foundation/
+📂 Project Structure
+SheCanFoundation/
 ├── backend/                 # Node.js + Express API
-│   ├── package.json
-│   └── server.js
-├── frontend/               # React + Vite + Tailwind
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── tailwind.config.js
-│   ├── postcss.config.js
-│   ├── index.html
-│   └── src/
-│       ├── main.jsx
-│       ├── App.jsx
-│       ├── index.css
-│       └── components/
+│   ├── package.json         # Backend dependencies and scripts
+│   └── server.js           # Main backend server file
+├── frontend/                # React + Vite + Tailwind frontend
+│   ├── package.json         # Frontend dependencies and scripts
+│   ├── vite.config.js       # Vite configuration
+│   ├── tailwind.config.js   # Tailwind CSS configuration
+│   ├── postcss.config.js    # PostCSS configuration
+│   ├── index.html           # HTML entry point
+│   └── src/                # React source files
+│       ├── main.jsx         # React entry point
+│       ├── App.jsx          # Main application component
+│       ├── index.css        # Global CSS styles
+│       └── components/      # Reusable React components
 │           ├── Login.jsx
 │           ├── Dashboard.jsx
 │           ├── Leaderboard.jsx
 │           └── Navigation.jsx
-└── README.md
-```            # Project documentation
+└── README.md               # Project documentation
 
-**Setup Instructions**
+🛠️ Setup Instructions
 Prerequisites
 
 Node.js: Version 14 or higher
@@ -84,7 +82,7 @@ npm start
 The application will be available at http://localhost:5000.
 
 
-**API Endpoints**
+🔗 API Endpoints
 GET /api/user
 Retrieves data for the authenticated user:
 {
@@ -108,7 +106,7 @@ Fetches leaderboard data for all interns:
   }
 ]
 
-**Feature Details**
+📊 Feature Details
 Intern Dashboard
 
 Statistics Cards: Displays intern name, referral code, and total donations.
@@ -126,7 +124,7 @@ Authentication
 Login Interface: Simple form redirecting to the dashboard (mock authentication).
 Session Management: Basic state management for tracking logged-in status.
 
-**Badge System**
+🏆 Badge System
 
 🥉 Bronze: $100+ in donations
 🥈 Silver: $250+ in donations
@@ -134,7 +132,7 @@ Session Management: Basic state management for tracking logged-in status.
 💎 Platinum: $1,000+ in donations
 💠 Diamond: $2,000+ in donations
 
-**Technology Stack**
+🛠️ Technology Stack
 Frontend
 
 React 18: Component-based UI with modern hooks.
@@ -150,7 +148,7 @@ Express: Robust web framework for API development.
 CORS: Enables cross-origin resource sharing.
 Nodemon: Auto-restarts server during development.
 
-**Development Workflow**
+🚀 Development Workflow
 Running Both Servers
 
 Backend (Terminal 1):
@@ -166,14 +164,14 @@ npm run dev
 
 Proxy Configuration
 API requests are proxied from the frontend to the backend during development, configured in frontend/vite.config.js.
-**Responsive Design**
+📱 Responsive Design
 The application is optimized for:
 
 Desktop: 1200px and above
 Tablet: 768px–1199px
 Mobile: Below 768px
 
-**Customization**
+🔧 Customization
 Adding API Endpoints
 
 Define new routes in backend/server.js.
@@ -186,7 +184,7 @@ Customize the theme in frontend/tailwind.config.js.
 Apply Tailwind utility classes in components.
 Add custom styles in frontend/src/index.css.
 
-**Troubleshooting**
+🐞 Troubleshooting
 Common Issues
 
 Port Conflicts:
@@ -208,10 +206,9 @@ Check for dependency version conflicts in package.json.
 
 
 
-**License**
+📜 License
 This project is developed exclusively for the She Can Foundation intern program. All rights reserved.
-
-**Contributing**
+🤝 Contributing
 
 Fork the repository.
 Create a feature branch (git checkout -b feature/your-feature).
@@ -219,9 +216,7 @@ Commit changes (git commit -m "Add your feature").
 Test thoroughly.
 Submit a pull request.
 
-**Contact**
-+91 8178153261
-jitendes2022@gmail.com 
+📧 Contact
 For support or inquiries, contact the She Can Foundation development team.
 
 Built for Impact. Powered by She Can Foundation. 🌍
