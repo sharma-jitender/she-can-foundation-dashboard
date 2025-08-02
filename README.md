@@ -10,26 +10,27 @@ Responsive Design: Optimized for seamless use across desktop, tablet, and mobile
 RESTful API: Powered by a Node.js and Express backend for efficient data management.
 
 **Project Structure**
-SheCanFoundation/
+She Can Foundation/
 ├── backend/                 # Node.js + Express API
-│   ├── package.json         # Backend dependencies and scripts
-│   └── server.js           # Main backend server file
-├── frontend/                # React + Vite + Tailwind frontend
-│   ├── package.json         # Frontend dependencies and scripts
-│   ├── vite.config.js       # Vite configuration
-│   ├── tailwind.config.js   # Tailwind CSS configuration
-│   ├── postcss.config.js    # PostCSS configuration
-│   ├── index.html           # HTML entry point
-│   └── src/                # React source files
-│       ├── main.jsx         # React entry point
-│       ├── App.jsx          # Main application component
-│       ├── index.css        # Global CSS styles
-│       └── components/      # Reusable React components
+│   ├── package.json
+│   └── server.js
+├── frontend/               # React + Vite + Tailwind
+│   ├── package.json
+│   ├── vite.config.js
+│   ├── tailwind.config.js
+│   ├── postcss.config.js
+│   ├── index.html
+│   └── src/
+│       ├── main.jsx
+│       ├── App.jsx
+│       ├── index.css
+│       └── components/
 │           ├── Login.jsx
 │           ├── Dashboard.jsx
 │           ├── Leaderboard.jsx
 │           └── Navigation.jsx
-└── README.md               # Project documentation
+└── README.md
+```            # Project documentation
 
 **Setup Instructions**
 Prerequisites
