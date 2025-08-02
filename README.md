@@ -1,116 +1,99 @@
-# She Can Foundation - Intern Dashboard
+She Can Foundation - Intern Dashboard
+A professional web application designed for She Can Foundation interns to monitor fundraising progress, view leaderboards, and unlock achievement-based rewards.
 
-A complete web application for She Can Foundation interns to track their fundraising progress, view leaderboards, and unlock rewards.
+**Features**
 
-## 🚀 Features
+Intern Dashboard: Displays personal statistics, unique referral codes, and total donations raised.
+Leaderboard: Showcases top-performing interns with rankings and achievement badges.
+Rewards System: Unlocks badges based on fundraising milestones.
+Responsive Design: Optimized for seamless use across desktop, tablet, and mobile devices using Tailwind CSS.
+RESTful API: Powered by a Node.js and Express backend for efficient data management.
 
-- **Dashboard**: View personal stats, referral codes, and total donations
-- **Leaderboard**: See top-performing interns with rankings and badges
-- **Rewards System**: Unlock badges based on fundraising milestones
-- **Responsive Design**: Modern UI built with Tailwind CSS
-- **REST API**: Node.js backend with Express
-
-## 📁 Project Structure
-
-```
-She Can Foundation/
+**Project Structure**
+SheCanFoundation/
 ├── backend/                 # Node.js + Express API
-│   ├── package.json
-│   └── server.js
-├── frontend/               # React + Vite + Tailwind
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── tailwind.config.js
-│   ├── postcss.config.js
-│   ├── index.html
-│   └── src/
-│       ├── main.jsx
-│       ├── App.jsx
-│       ├── index.css
-│       └── components/
+│   ├── package.json         # Backend dependencies and scripts
+│   └── server.js           # Main backend server file
+├── frontend/                # React + Vite + Tailwind frontend
+│   ├── package.json         # Frontend dependencies and scripts
+│   ├── vite.config.js       # Vite configuration
+│   ├── tailwind.config.js   # Tailwind CSS configuration
+│   ├── postcss.config.js    # PostCSS configuration
+│   ├── index.html           # HTML entry point
+│   └── src/                # React source files
+│       ├── main.jsx         # React entry point
+│       ├── App.jsx          # Main application component
+│       ├── index.css        # Global CSS styles
+│       └── components/      # Reusable React components
 │           ├── Login.jsx
 │           ├── Dashboard.jsx
 │           ├── Leaderboard.jsx
 │           └── Navigation.jsx
-└── README.md
-```
+└── README.md               # Project documentation
 
-## 🛠️ Setup Instructions
+**Setup Instructions**
+Prerequisites
 
-### Prerequisites
+Node.js: Version 14 or higher
+npm or yarn: Package manager for dependency installation
 
-- Node.js (v14 or higher)
-- npm or yarn
+Backend Setup
 
-### Backend Setup
+Navigate to the backend directory:
+cd backend
 
-1. **Navigate to backend directory:**
-   ```bash
-   cd backend
-   ```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+Install dependencies:
+npm install
 
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
 
-   The backend will run on `http://localhost:5000`
+Start the development server:
+npm run dev
 
-### Frontend Setup
+The backend API will be available at http://localhost:5000.
 
-1. **Navigate to frontend directory:**
-   ```bash
-   cd frontend
-   ```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+Frontend Setup
 
-3. **Start the development server:**
-   ```bash
-   npm run dev
-   ```
+Navigate to the frontend directory:
+cd frontend
 
-   The frontend will run on `http://localhost:3000`
 
-### Production Build
+Install dependencies:
+npm install
 
-1. **Build the frontend:**
-   ```bash
-   cd frontend
-   npm run build
-   ```
 
-2. **Start the production server:**
-   ```bash
-   cd backend
-   npm start
-   ```
+Start the development server:
+npm run dev
 
-   The application will be available at `http://localhost:5000`
+The frontend will be accessible at http://localhost:3000.
 
-## 🔧 API Endpoints
 
-### GET `/api/user`
-Returns current user data:
-```json
+Production Build
+
+Build the frontend for production:
+cd frontend
+npm run build
+
+
+Start the production server:
+cd backend
+npm start
+
+The application will be available at http://localhost:5000.
+
+
+**API Endpoints**
+GET /api/user
+Retrieves data for the authenticated user:
 {
   "name": "John Doe",
   "referralCode": "johndoe2025",
   "totalDonations": 500
 }
-```
 
-### GET `/api/leaderboard`
-Returns leaderboard data:
-```json
+GET /api/leaderboard
+Fetches leaderboard data for all interns:
 [
   {
     "name": "John Doe",
@@ -123,116 +106,121 @@ Returns leaderboard data:
     "totalDonations": 450
   }
 ]
-```
 
-## 🎨 Features Overview
+**Feature Details**
+Intern Dashboard
 
-### Dashboard
-- **User Stats Cards**: Display intern name, referral code, and total donations
-- **Rewards Section**: Show unlocked and locked badges with progress indicators
-- **Responsive Design**: Works on desktop, tablet, and mobile devices
+Statistics Cards: Displays intern name, referral code, and total donations.
+Rewards Section: Visualizes unlocked and locked badges with progress tracking.
+Responsive Layout: Fully optimized for desktop, tablet, and mobile devices.
 
-### Leaderboard
-- **Ranking Table**: Shows top interns with their performance metrics
-- **Badge System**: Automatic badge assignment based on donation amounts
-- **Statistics Summary**: Total participants, total raised, and average per intern
+Leaderboard
 
-### Authentication
-- **Dummy Login**: Simple form that redirects to dashboard (no real authentication)
-- **Session Management**: Basic state management for logged-in status
+Ranking Table: Lists top interns with performance metrics and rankings.
+Badge System: Automatically assigns badges based on donation milestones.
+Summary Metrics: Displays total participants, total funds raised, and average donations per intern.
 
-## 🎯 Badge System
+Authentication
 
-- **🥉 Bronze**: $100+ in donations
-- **🥈 Silver**: $250+ in donations
-- **🥇 Gold**: $500+ in donations
-- **💎 Platinum**: $1000+ in donations
-- **💠 Diamond**: $2000+ in donations
+Login Interface: Simple form redirecting to the dashboard (mock authentication).
+Session Management: Basic state management for tracking logged-in status.
 
-## 🛠️ Technologies Used
+**Badge System**
 
-### Frontend
-- **React 18**: Modern React with hooks
-- **Vite**: Fast build tool and dev server
-- **Tailwind CSS**: Utility-first CSS framework
-- **React Router**: Client-side routing
-- **Axios**: HTTP client for API calls
+🥉 Bronze: $100+ in donations
+🥈 Silver: $250+ in donations
+🥇 Gold: $500+ in donations
+💎 Platinum: $1,000+ in donations
+💠 Diamond: $2,000+ in donations
 
-### Backend
-- **Node.js**: JavaScript runtime
-- **Express**: Web framework
-- **CORS**: Cross-origin resource sharing
-- **Nodemon**: Development server with auto-reload
+**Technology Stack**
+Frontend
 
-## 🚀 Development
+React 18: Component-based UI with modern hooks.
+Vite: High-performance build tool and development server.
+Tailwind CSS: Utility-first CSS framework for rapid styling.
+React Router: Handles client-side navigation.
+Axios: Facilitates API requests.
 
-### Running Both Servers
+Backend
 
-1. **Terminal 1 - Backend:**
-   ```bash
-   cd backend
-   npm run dev
-   ```
+Node.js: JavaScript runtime for server-side logic.
+Express: Robust web framework for API development.
+CORS: Enables cross-origin resource sharing.
+Nodemon: Auto-restarts server during development.
 
-2. **Terminal 2 - Frontend:**
-   ```bash
-   cd frontend
-   npm run dev
-   ```
+**Development Workflow**
+Running Both Servers
 
-### Proxy Configuration
+Backend (Terminal 1):
+cd backend
+npm run dev
 
-The frontend is configured to proxy API requests to the backend during development. This is handled in `vite.config.js`.
 
-## 📱 Responsive Design
+Frontend (Terminal 2):
+cd frontend
+npm run dev
 
-The application is fully responsive and works on:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (< 768px)
 
-## 🔧 Customization
 
-### Adding New API Endpoints
+Proxy Configuration
+API requests are proxied from the frontend to the backend during development, configured in frontend/vite.config.js.
+**Responsive Design**
+The application is optimized for:
 
-1. Add new routes in `backend/server.js`
-2. Create corresponding API calls in frontend components
-3. Update the frontend to handle the new data
+Desktop: 1200px and above
+Tablet: 768px–1199px
+Mobile: Below 768px
 
-### Styling Changes
+**Customization**
+Adding API Endpoints
 
-- Modify `frontend/tailwind.config.js` for theme customization
-- Update component styles using Tailwind classes
-- Add custom CSS in `frontend/src/index.css`
+Define new routes in backend/server.js.
+Implement corresponding API calls in frontend components.
+Update frontend to render new data.
 
-## 🐛 Troubleshooting
+Styling Modifications
 
-### Common Issues
+Customize the theme in frontend/tailwind.config.js.
+Apply Tailwind utility classes in components.
+Add custom styles in frontend/src/index.css.
 
-1. **Port already in use:**
-   - Change the port in `backend/server.js` or `frontend/vite.config.js`
-   - Kill processes using the ports: `npx kill-port 3000 5000`
+**Troubleshooting**
+Common Issues
 
-2. **CORS errors:**
-   - Ensure the backend is running on port 5000
-   - Check that CORS middleware is properly configured
+Port Conflicts:
 
-3. **Build errors:**
-   - Clear node_modules and reinstall: `rm -rf node_modules && npm install`
-   - Check for version conflicts in package.json
+Update ports in backend/server.js or frontend/vite.config.js.
+Terminate conflicting processes: npx kill-port 3000 5000.
 
-## 📄 License
 
-This project is created for She Can Foundation intern program.
+CORS Errors:
 
-## 🤝 Contributing
+Verify backend is running on port 5000.
+Confirm CORS middleware is correctly configured in backend/server.js.
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
 
----
+Build Failures:
 
-**Happy Coding! 🎉** 
+Remove and reinstall dependencies: rm -rf node_modules && npm install.
+Check for dependency version conflicts in package.json.
+
+
+
+**License**
+This project is developed exclusively for the She Can Foundation intern program. All rights reserved.
+
+**Contributing**
+
+Fork the repository.
+Create a feature branch (git checkout -b feature/your-feature).
+Commit changes (git commit -m "Add your feature").
+Test thoroughly.
+Submit a pull request.
+
+**Contact**
++91 8178153261
+jitendes2022@gmail.com 
+For support or inquiries, contact the She Can Foundation development team.
+
+Built for Impact. Powered by She Can Foundation. 🌍
