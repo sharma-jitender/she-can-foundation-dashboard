@@ -42,6 +42,19 @@ She Can Foundation/
 - Node.js (v14 or higher)
 - npm or yarn
 
+## 🚀 Quick Deploy to Render
+
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy)
+
+**One-click deployment to Render:**
+
+1. Click the "Deploy to Render" button above
+2. Connect your GitHub account
+3. Select this repository
+4. Click "Deploy"
+
+**Manual deployment:** See [DEPLOYMENT.md](./DEPLOYMENT.md) for detailed instructions.
+
 ### Backend Setup
 
 1. **Navigate to backend directory:**
