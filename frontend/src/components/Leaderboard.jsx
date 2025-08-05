@@ -9,17 +9,24 @@ const Leaderboard = () => {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const response = await axios.get('/api/leaderboard')
-        setLeaderboardData(response.data)
-        setLoading(false)
+        const baseURL = window.location.origin;
+        const response = await axios.get(`${baseURL}/api/leaderboard`, {
+          timeout: 10000,
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+        setLeaderboardData(response.data);
+        setLoading(false);
       } catch (err) {
-        setError('Failed to fetch leaderboard data')
-        setLoading(false)
+        console.error('API Error:', err);
+        setError('Failed to fetch leaderboard data. Please try again.');
+        setLoading(false);
       }
-    }
+    };
 
-    fetchLeaderboard()
-  }, [])
+    fetchLeaderboard();
+  }, []);
 
   if (loading) {
     return (

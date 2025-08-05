@@ -9,17 +9,25 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        const response = await axios.get('/api/user')
-        setUserData(response.data)
-        setLoading(false)
+        // Try relative path first, then fallback to full URL
+        const baseURL = window.location.origin;
+        const response = await axios.get(`${baseURL}/api/user`, {
+          timeout: 10000,
+          headers: {
+            'Content-Type': 'application/json',
+          }
+        });
+        setUserData(response.data);
+        setLoading(false);
       } catch (err) {
-        setError('Failed to fetch user data')
-        setLoading(false)
+        console.error('API Error:', err);
+        setError('Failed to fetch user data. Please try again.');
+        setLoading(false);
       }
-    }
+    };
 
-    fetchUserData()
-  }, [])
+    fetchUserData();
+  }, []);
 
   const rewards = [
     {
