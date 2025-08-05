@@ -1,46 +1,46 @@
 # She Can Foundation - Intern Dashboard
 
-A complete web application for She Can Foundation interns to track their fundraising progress, view leaderboards, and unlock rewards.
+A professional web application designed for She Can Foundation interns to monitor fundraising progress, view leaderboards, and unlock achievement-based rewards.
 
-## 🚀 Features
+## 🌟 Features
 
-- **Dashboard**: View personal stats, referral codes, and total donations
-- **Leaderboard**: See top-performing interns with rankings and badges
-- **Rewards System**: Unlock badges based on fundraising milestones
-- **Responsive Design**: Modern UI built with Tailwind CSS
-- **REST API**: Node.js backend with Express
+- **Intern Dashboard**: Displays personal statistics, unique referral codes, and total donations raised.
+- **Leaderboard**: Showcases top-performing interns with rankings and achievement badges.
+- **Rewards System**: Unlocks badges based on fundraising milestones.
+- **Responsive Design**: Optimized for seamless use across desktop, tablet, and mobile devices using Tailwind CSS.
+- **RESTful API**: Powered by a Node.js and Express backend for efficient data management.
 
-## 📁 Project Structure
+## 📂 Project Structure
 
 ```
-She Can Foundation/
+SheCanFoundation/
 ├── backend/                 # Node.js + Express API
-│   ├── package.json
-│   └── server.js
-├── frontend/               # React + Vite + Tailwind
-│   ├── package.json
-│   ├── vite.config.js
-│   ├── tailwind.config.js
-│   ├── postcss.config.js
-│   ├── index.html
-│   └── src/
-│       ├── main.jsx
-│       ├── App.jsx
-│       ├── index.css
-│       └── components/
+│   ├── package.json         # Backend dependencies and scripts
+│   └── server.js           # Main backend server file
+├── frontend/                # React + Vite + Tailwind frontend
+│   ├── package.json         # Frontend dependencies and scripts
+│   ├── vite.config.js       # Vite configuration
+│   ├── tailwind.config.js   # Tailwind CSS configuration
+│   ├── postcss.config.js    # PostCSS configuration
+│   ├── index.html           # HTML entry point
+│   └── src/                # React source files
+│       ├── main.jsx         # React entry point
+│       ├── App.jsx          # Main application component
+│       ├── index.css        # Global CSS styles
+│       └── components/      # Reusable React components
 │           ├── Login.jsx
 │           ├── Dashboard.jsx
 │           ├── Leaderboard.jsx
 │           └── Navigation.jsx
-└── README.md
+└── README.md               # Project documentation
 ```
 
 ## 🛠️ Setup Instructions
 
 ### Prerequisites
 
-- Node.js (v14 or higher)
-- npm or yarn
+- **Node.js**: Version 14 or higher
+- **npm or yarn**: Package manager for dependency installation
 
 ## 🚀 Quick Deploy to Render
 
@@ -57,7 +57,7 @@ She Can Foundation/
 
 ### Backend Setup
 
-1. **Navigate to backend directory:**
+1. **Navigate to the backend directory:**
    ```bash
    cd backend
    ```
@@ -72,11 +72,11 @@ She Can Foundation/
    npm run dev
    ```
 
-   The backend will run on `http://localhost:5000`
+   The backend API will be available at `http://localhost:5000`.
 
 ### Frontend Setup
 
-1. **Navigate to frontend directory:**
+1. **Navigate to the frontend directory:**
    ```bash
    cd frontend
    ```
@@ -91,11 +91,11 @@ She Can Foundation/
    npm run dev
    ```
 
-   The frontend will run on `http://localhost:3000`
+   The frontend will be accessible at `http://localhost:3000`.
 
 ### Production Build
 
-1. **Build the frontend:**
+1. **Build the frontend for production:**
    ```bash
    cd frontend
    npm run build
@@ -107,12 +107,12 @@ She Can Foundation/
    npm start
    ```
 
-   The application will be available at `http://localhost:5000`
+   The application will be available at `http://localhost:5000`.
 
-## 🔧 API Endpoints
+## 🔗 API Endpoints
 
 ### GET `/api/user`
-Returns current user data:
+Retrieves data for the authenticated user:
 ```json
 {
   "name": "John Doe",
@@ -122,7 +122,7 @@ Returns current user data:
 ```
 
 ### GET `/api/leaderboard`
-Returns leaderboard data:
+Fetches leaderboard data for all interns:
 ```json
 [
   {
@@ -138,114 +138,115 @@ Returns leaderboard data:
 ]
 ```
 
-## 🎨 Features Overview
+## 📊 Feature Details
 
-### Dashboard
-- **User Stats Cards**: Display intern name, referral code, and total donations
-- **Rewards Section**: Show unlocked and locked badges with progress indicators
-- **Responsive Design**: Works on desktop, tablet, and mobile devices
+### Intern Dashboard
+- **Statistics Cards**: Displays intern name, referral code, and total donations.
+- **Rewards Section**: Visualizes unlocked and locked badges with progress tracking.
+- **Responsive Layout**: Fully optimized for desktop, tablet, and mobile devices.
 
 ### Leaderboard
-- **Ranking Table**: Shows top interns with their performance metrics
-- **Badge System**: Automatic badge assignment based on donation amounts
-- **Statistics Summary**: Total participants, total raised, and average per intern
+- **Ranking Table**: Lists top interns with performance metrics and rankings.
+- **Badge System**: Automatically assigns badges based on donation milestones.
+- **Summary Metrics**: Displays total participants, total funds raised, and average donations per intern.
 
 ### Authentication
-- **Dummy Login**: Simple form that redirects to dashboard (no real authentication)
-- **Session Management**: Basic state management for logged-in status
+- **Login Interface**: Simple form redirecting to the dashboard (mock authentication).
+- **Session Management**: Basic state management for tracking logged-in status.
 
-## 🎯 Badge System
+## 🏆 Badge System
 
 - **🥉 Bronze**: $100+ in donations
 - **🥈 Silver**: $250+ in donations
 - **🥇 Gold**: $500+ in donations
-- **💎 Platinum**: $1000+ in donations
-- **💠 Diamond**: $2000+ in donations
+- **💎 Platinum**: $1,000+ in donations
+- **💠 Diamond**: $2,000+ in donations
 
-## 🛠️ Technologies Used
+## 🛠️ Technology Stack
 
 ### Frontend
-- **React 18**: Modern React with hooks
-- **Vite**: Fast build tool and dev server
-- **Tailwind CSS**: Utility-first CSS framework
-- **React Router**: Client-side routing
-- **Axios**: HTTP client for API calls
+- **React 18**: Component-based UI with modern hooks.
+- **Vite**: High-performance build tool and development server.
+- **Tailwind CSS**: Utility-first CSS framework for rapid styling.
+- **React Router**: Handles client-side navigation.
+- **Axios**: Facilitates API requests.
 
 ### Backend
-- **Node.js**: JavaScript runtime
-- **Express**: Web framework
-- **CORS**: Cross-origin resource sharing
-- **Nodemon**: Development server with auto-reload
+- **Node.js**: JavaScript runtime for server-side logic.
+- **Express**: Robust web framework for API development.
+- **CORS**: Enables cross-origin resource sharing.
+- **Nodemon**: Auto-restarts server during development.
 
-## 🚀 Development
+## 🚀 Development Workflow
 
 ### Running Both Servers
 
-1. **Terminal 1 - Backend:**
-   ```bash
-   cd backend
-   npm run dev
-   ```
+**Backend (Terminal 1):**
+```bash
+cd backend
+npm run dev
+```
 
-2. **Terminal 2 - Frontend:**
-   ```bash
-   cd frontend
-   npm run dev
-   ```
+**Frontend (Terminal 2):**
+```bash
+cd frontend
+npm run dev
+```
 
 ### Proxy Configuration
-
-The frontend is configured to proxy API requests to the backend during development. This is handled in `vite.config.js`.
+API requests are proxied from the frontend to the backend during development, configured in `frontend/vite.config.js`.
 
 ## 📱 Responsive Design
 
-The application is fully responsive and works on:
-- Desktop (1200px+)
-- Tablet (768px - 1199px)
-- Mobile (< 768px)
+The application is optimized for:
+- **Desktop**: 1200px and above
+- **Tablet**: 768px–1199px
+- **Mobile**: Below 768px
 
 ## 🔧 Customization
 
-### Adding New API Endpoints
+### Adding API Endpoints
+1. Define new routes in `backend/server.js`.
+2. Implement corresponding API calls in frontend components.
+3. Update frontend to render new data.
 
-1. Add new routes in `backend/server.js`
-2. Create corresponding API calls in frontend components
-3. Update the frontend to handle the new data
+### Styling Modifications
+- Customize the theme in `frontend/tailwind.config.js`.
+- Apply Tailwind utility classes in components.
+- Add custom styles in `frontend/src/index.css`.
 
-### Styling Changes
-
-- Modify `frontend/tailwind.config.js` for theme customization
-- Update component styles using Tailwind classes
-- Add custom CSS in `frontend/src/index.css`
-
-## 🐛 Troubleshooting
+## 🐞 Troubleshooting
 
 ### Common Issues
 
-1. **Port already in use:**
-   - Change the port in `backend/server.js` or `frontend/vite.config.js`
-   - Kill processes using the ports: `npx kill-port 3000 5000`
+**Port Conflicts:**
+- Update ports in `backend/server.js` or `frontend/vite.config.js`.
+- Terminate conflicting processes: `npx kill-port 3000 5000`.
 
-2. **CORS errors:**
-   - Ensure the backend is running on port 5000
-   - Check that CORS middleware is properly configured
+**CORS Errors:**
+- Verify backend is running on port 5000.
+- Confirm CORS middleware is correctly configured in `backend/server.js`.
 
-3. **Build errors:**
-   - Clear node_modules and reinstall: `rm -rf node_modules && npm install`
-   - Check for version conflicts in package.json
+**Build Failures:**
+- Remove and reinstall dependencies: `rm -rf node_modules && npm install`.
+- Check for dependency version conflicts in `package.json`.
 
-## 📄 License
+## 📜 License
 
-This project is created for She Can Foundation intern program.
+This project is developed exclusively for the She Can Foundation intern program. All rights reserved.
 
 ## 🤝 Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
+1. Fork the repository.
+2. Create a feature branch (`git checkout -b feature/your-feature`).
+3. Commit changes (`git commit -m "Add your feature"`).
+4. Test thoroughly.
+5. Submit a pull request.
+
+## 📧 Contact
+
+For support or inquiries, contact the She Can Foundation development team.
 
 ---
 
-**Happy Coding! 🎉** 
+**Built for Impact. Powered by She Can Foundation. 🌍**

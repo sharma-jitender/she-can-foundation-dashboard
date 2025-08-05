@@ -1,13 +1,28 @@
 services:
+  # Backend API Service
+  - type: web
+    name: she-can-foundation-dashboard-backend
+    env: node
+    plan: free
+    buildCommand: |
+      cd backend && npm install
+    startCommand: cd backend && npm start
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+    healthCheckPath: /health
+
+  # Frontend Service
   - type: web
     name: she-can-foundation-dashboard
     env: node
     plan: free
     buildCommand: |
-      npm install
-      cd backend && npm install
-      cd ../frontend && npm install && npm run build
-    startCommand: npm start
+      cd frontend && npm install && npm run build
+    startCommand: |
+      cd frontend && npm install -g serve && serve -s dist -l 10000
     envVars:
       - key: NODE_ENV
         value: production

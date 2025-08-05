@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
+import apiClient from '../config/api'
 
 const Dashboard = () => {
   const [userData, setUserData] = useState(null)
@@ -9,14 +9,7 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchUserData = async () => {
       try {
-        // Try relative path first, then fallback to full URL
-        const baseURL = window.location.origin;
-        const response = await axios.get(`${baseURL}/api/user`, {
-          timeout: 10000,
-          headers: {
-            'Content-Type': 'application/json',
-          }
-        });
+        const response = await apiClient.get('/api/user');
         setUserData(response.data);
         setLoading(false);
       } catch (err) {

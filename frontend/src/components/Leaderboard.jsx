@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import axios from 'axios'
+import apiClient from '../config/api'
 
 const Leaderboard = () => {
   const [leaderboardData, setLeaderboardData] = useState([])
@@ -9,13 +9,7 @@ const Leaderboard = () => {
   useEffect(() => {
     const fetchLeaderboard = async () => {
       try {
-        const baseURL = window.location.origin;
-        const response = await axios.get(`${baseURL}/api/leaderboard`, {
-          timeout: 10000,
-          headers: {
-            'Content-Type': 'application/json',
-          }
-        });
+        const response = await apiClient.get('/api/leaderboard');
         setLeaderboardData(response.data);
         setLoading(false);
       } catch (err) {
